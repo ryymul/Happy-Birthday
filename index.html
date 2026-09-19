@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Happy Birthday 🎂</title>
+    <title>Happy Birthday 💙</title>
 
     <style>
         * {
@@ -19,7 +20,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #ffd6e7, #d9e8ff);
+
+            /* WARNA BACKGROUND */
+            background: linear-gradient(135deg, #cce7ff, #e8f4ff);
+
             overflow: hidden;
         }
 
@@ -28,9 +32,13 @@
             max-width: 500px;
             padding: 40px 30px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.8);
+
+            background: rgba(255, 255, 255, 0.85);
+
             border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+            box-shadow: 0 10px 30px rgba(0, 100, 180, 0.18);
+
             animation: muncul 1s ease;
         }
 
@@ -41,18 +49,22 @@
 
         h1 {
             margin-top: 15px;
-            color: #ff5c93;
+
+            /* WARNA JUDUL */
+            color: #2388d9;
+
             font-size: 38px;
         }
 
         h2 {
             margin-top: 10px;
-            color: #555;
+            color: #4d6f8d;
         }
 
         p {
             margin-top: 20px;
-            color: #555;
+            color: #526b80;
+
             line-height: 1.7;
             font-size: 16px;
         }
@@ -61,15 +73,20 @@
             display: inline-block;
             margin-top: 25px;
             padding: 12px 25px;
-            background: #ff78a8;
+
+            /* WARNA BUTTON */
+            background: #4aa3df;
+
             color: white;
+
             border-radius: 30px;
             cursor: pointer;
+
             transition: 0.3s;
         }
 
         .button:hover {
-            background: #ff4f8b;
+            background: #2388d9;
             transform: scale(1.05);
         }
 
@@ -77,16 +94,22 @@
             display: none;
             margin-top: 20px;
             padding: 15px;
-            background: #fff0f6;
+
+            /* KOTAK PESAN */
+            background: #e5f3ff;
+
             border-radius: 15px;
-            color: #555;
+            color: #526b80;
         }
 
         .heart {
             position: absolute;
             bottom: -50px;
+
             font-size: 25px;
+
             animation: naik 6s linear infinite;
+
             opacity: 0.7;
         }
 
@@ -95,6 +118,7 @@
                 opacity: 0;
                 transform: scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -105,6 +129,7 @@
             0%, 100% {
                 transform: rotate(-8deg);
             }
+
             50% {
                 transform: rotate(8deg);
             }
@@ -115,9 +140,11 @@
                 transform: translateY(0);
                 opacity: 0;
             }
+
             20% {
                 opacity: 0.8;
             }
+
             to {
                 transform: translateY(-110vh);
                 opacity: 0;
@@ -128,33 +155,39 @@
 
 <body>
 
-    <!-- Hiasan hati -->
-    <div class="heart" style="left:10%; animation-delay:1s;">💗</div>
-    <div class="heart" style="left:25%; animation-delay:3s;">💖</div>
-    <div class="heart" style="left:50%; animation-delay:0s;">💕</div>
-    <div class="heart" style="left:70%; animation-delay:2s;">💗</div>
-    <div class="heart" style="left:90%; animation-delay:4s;">💖</div>
+    <!-- Hiasan -->
+    <div class="heart" style="left:10%; animation-delay:1s;">💙</div>
+    <div class="heart" style="left:25%; animation-delay:3s;">🩵</div>
+    <div class="heart" style="left:50%; animation-delay:0s;">💙</div>
+    <div class="heart" style="left:70%; animation-delay:2s;">🩵</div>
+    <div class="heart" style="left:90%; animation-delay:4s;">💙</div>
 
 
     <div class="card">
 
         <div class="emoji">🎂</div>
 
-        <!-- GANTI NAMA DI SINI -->
-        <h1>Happy Birthday, Kakak Zahra 🎉</h1>
+        <!-- GANTI NAMA DIA DI SINI -->
+        <h1>Happy Birthday, Kak Zahra 🎉</h1>
 
         <!-- GANTI KALIMAT INI KALAU MAU -->
-        <h2>Semoga hari ini spesial buat kamu ✨</h2>
+        <h2>Semoga hari ini spesial buat kamu 💙</h2>
 
         <p>
-            Semoga Sehat Selalu yaa
-            <br><br>
+
+            <!-- TULIS PESAN KAMU DI SINI -->
 
             Semoga di umur yang baru ini,
             kamu selalu diberikan kebahagiaan,
             kesehatan, dan banyak hal baik.
+
+            <br><br>
+
             Semoga semua yang kamu harapkan
-            bisa perlahan-lahan terwujud. 💗
+            bisa perlahan-lahan terwujud.
+            Jangan lupa bahagia dan tetap jadi
+            diri kamu sendiri. 🩵
+
         </p>
 
         <div class="button" onclick="bukaPesan()">
@@ -162,25 +195,36 @@
         </div>
 
         <div id="pesan">
+
             <!-- TULIS PESAN RAHASIA DI SINI -->
-            🎀 Jangan lupa senyum hari ini yaa.
-            Karena hari ini adalah hari spesial kamu! 💕
+
+            🩵 Jangan lupa senyum hari ini yaa.
+            Karena hari ini adalah hari spesial kamu! 💙
+
         </div>
 
     </div>
 
 
     <script>
+
         function bukaPesan() {
+
             const pesan = document.getElementById("pesan");
 
             if (pesan.style.display === "block") {
+
                 pesan.style.display = "none";
+
             } else {
+
                 pesan.style.display = "block";
+
             }
         }
+
     </script>
 
 </body>
 </html>
+```
